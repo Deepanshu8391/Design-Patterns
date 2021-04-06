@@ -10,17 +10,17 @@ object Application extends App {
       val roadLogistics = new RoadLogistics
       val randomNumber = Random.nextInt(3)
       randomNumber match {
-        case 0 => roadLogistics.planDelivery("bus")
-        case 1 => roadLogistics.planDelivery("truck")
-        case 2 => roadLogistics.planDelivery("car")
+        case 0 => roadLogistics.planDelivery(Bus)
+        case 1 => roadLogistics.planDelivery(Truck)
+        case 2 => roadLogistics.planDelivery(Car)
         case _ => System.err.println("Invalid road vehicle name")
       }
     case 1 =>
       val seaLogistics = new SeaLogistics()
-      seaLogistics.planDelivery("ship")
+      seaLogistics.planDelivery(Ship)
     case 2 =>
       val airLogistics = new AirLogistics()
-      airLogistics.planDelivery("plane")
+      airLogistics.planDelivery(Plane)
     case _ => System.err.println("Invalid Logistics request")
   }
 }

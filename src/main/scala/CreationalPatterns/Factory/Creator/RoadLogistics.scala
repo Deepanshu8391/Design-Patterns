@@ -1,11 +1,9 @@
 package CreationalPatterns.Factory.Creator
 
+import CreationalPatterns.Factory._
 import CreationalPatterns.Factory.Product._
 
 class RoadLogistics extends Logistics {
-  val Bus = "bus"
-  val Car = "car"
-  val Truck = "truck"
   override def createTransport(vehicle: String): Transport = {
     vehicle match {
       case Bus => new Bus()
